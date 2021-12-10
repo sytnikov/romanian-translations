@@ -1,10 +1,61 @@
 ---
 en:
+  activerecord:
+    models:
+      answer: Answer
+      certificate: Certificate
+      certificate_template: Certificate Template
+      feature: Feature
+      goal: Goal
+      group: Group
+      integration: Integration
+      item: Lesson
+      option: Option
+      path: Course
+      payment: Payment
+      plan: Plan
+      question: Question
+      skill: Tag
+      tenant: Academy
+      theme: Theme
+      user: User
+    attributes:
+      certificate:
+        date_issued: Date issued
+        status: Status
+      certificate_template:
+        course_description: Course description
+        brand_logo: Brand logo
+        signature: Signature
+        printed_name: "Printed name"
+        printed_position: "Printed position"
+        minimum_level: "Minimum level to issue"
+        automatically_issued: "Automatically issued"
+      groups:
+        name: Name
+      items:
+        attachment: Attachment
+      path:
+        banner: Cover image
+        background_image: Background image
+        free: Free
+        subscription: Subscription
+        one-time: One-time
+      tenants:
+        subdomain: Subdomain
+        password: Password
+      themes:
+        brand_logo: Brand logo
+        background_image: Background image
+        course_background: Course background
+      user:
+        avatar: Avatar
   admin:
     welcome:
       index:
         total_views: Total Views
         lesson_title: Lesson title
+        in_minutes: "(in minutes)"
     paths:
       certificates_tab:
         completed: Completed Lessons
@@ -24,6 +75,16 @@ en:
       edit_payment:
         billing_mode: Billing mode
         edit_payment: Edit payment
+        currency_hint: "You are using %{name} (%{code}) as your default currency."
+        change_currency: "Change currency"
+      update:
+        updated: "Course was successfully updated."
+        error: "Sorry, something went wrong when updating."
+      destroy:
+        destroyed: "Course was successfully destroyed."
+      sales:
+        active_subscriber: "active subscriber"
+        active_subscribers: "active subscribers"
     users:
       index:
         banner_button: Change access policy
@@ -37,8 +98,22 @@ en:
           button: Copy
           title: Or share this link
         expenditures: Expenditures
+        lesson:
+          zero: Lesson
+          one: Lesson
+          other: Lessons
+        last_viewed: "Last viewed:"
+      change_role:
+        one_admin: "You need at least one administrator."
+        admin_limit: "You've reached your limit of admins. Consider upgrading your plan at Admin > Billing."
+        not_valid: "This is not a valid role."
+      helper:
+        active: "Active"
+        invitated: "Invitation Pending"
     items:
       completed: Completed
+      destroy:
+        destroyed: "Lesson was successfully deleted."
     groups:
       index:
         members: Members
@@ -57,6 +132,12 @@ en:
         modal_form_users_label: Add users
         modal_form_users_placeholder: Select users
         modal_title: Update group
+      create:
+        created: "Group was successfully created."
+      update:
+        updated: "Group was successfully updated."
+      destroy:
+        destroyed: "Group was successfully deleted."
     certificate_templates:
       index:
         issue_config: Issue Configuration
@@ -67,9 +148,24 @@ en:
         not_created: Not created yet
         edit: Edit template
         create: Create template
+      update:
+        updated: "The certificate template was successfully updated."
+      edit:
+        subtitle_html: "Edit certificates for the course <strong>%{course}</strong>."
+        change_logo: "Change logo"
+        upload_logo: "Upload logo"
+        file_recommendations: "We recommend using a PNG file with transparency. Maximum size: 1200 x 600px."
+        change_signature: "Change signature"
+        upload_signature: "Upload signature"
+        automatic_hint: "If you set this as automatic, certificates will be issued after the learner reaches a minimum level to issue, which you can setup below."
     layouts:
       application:
         workspace: Back to Academy
+        marble_academy: "💎 Marble Academy"
+        help_center: "📚 Help Center"
+        facebook: "👍 Facebook Group"
+        feature_request: "👾 Feature request"
+        contact_support: "💬 Contact support"
     questions:
       show:
         col:
@@ -78,6 +174,8 @@ en:
           name: Name
         completed: Completed
         title: Title
+      destroy:
+        destroyed: "Question was successfully deleted."
     plans:
       index:
         manage: Manage your Plan
@@ -95,7 +193,7 @@ en:
         features_included: Features included in all plans
         alert_premium: Your plan provides two academies. If you want to create a second one, please get in touch with us through <a href="mailto:support@marbleteams.com">support@marbleteams.com</a>.
         topic1: Private/public academy
-        topic2: 'Micro-learning: bite-sized course creator'
+        topic2: "Micro-learning: bite-sized course creator"
         topic3: Public, restricted and hidden courses
         topic4: Quizzes
         topic5: Custom domain
@@ -109,6 +207,17 @@ en:
         topic13: User profiles
         topic14: Clone lessons
         topic15: Course collaborators
+        manage_subscription: "Manage Subscription"
+        unlimited_academies: "Unlimited academies"
+        unlimited_active_courses: "Unlimited active courses"
+        active_courses: "active courses"
+        custom_plan_offer: "Didn't find the ideal plan? Contact us so that we can customize it for you."
+        expires_at: "Expires at %{date}"
+      payment_confirmed: "The payment was confirmed and you new plan is already available. That means you can start using all the features right away."
+      hope_you_enjoy: "We hope you enjoy your experience and that you can use Marble to leverage your business and engage your customers. Feel free to contact us for support, when you need."
+      lets_start: "Let's start!"
+      error_restart: "You can restart the process to subscribe to the plan."
+      error_customer_portal: "Sorry, we had a problem connecting your Stripe account. Please, contact our support"
     tenants:
       edit:
         name: Academy name
@@ -119,7 +228,7 @@ en:
         whitelabel_checkbox: Remove 'Powered by Marble' signatures
         design_title: Design
         design_subtitle: Update your brand logo, background images and the colors used in your academy.
-        brand_instructions: 'Max size: 2000 x 700 px'
+        brand_instructions: "Max size: 2000 x 700 px"
         brand_logo: Brand logo
         favicon_logo: Favicon logo
         save_logo: Save logo
@@ -129,16 +238,31 @@ en:
         form:
           placeholder: example.yourdomain.tld
           submit: Save custom domain
-          subtext: 'Please enter your custom (sub)domain without http:// or https://. Your domain will automatically be secured by SSL. It may take up to 24 hours for the DNS changes to be reflected.'
+          subtext: 'Please enter your custom (sub)domain by following the custom domain structure mysubdomain.mydomain.myTLD. Example: academy.icandoanything.com. Your domain will automatically be secured by SSL. It may take up to 24 hours for the DNS changes to be reflected.'
         subtitle: Set a custom domain for your academy
-        text_html: "Your academy will be available on %{url} and the <span class='font-weight-bold'>custom
+        text_html:
+          "Your academy will be available on %{url} and the <span class='font-weight-bold'>custom
           domain</span> you choose here:"
+        dns_checks_info: "These are automatically generated CNAME records for setting up your custom domain. Copy and paste them to your Domain's DNS records:"
         title: Custom Domain
-        learn_more_html: <a href='https://academy.marbleteams.com/mypaths/102/items/199/advanced'>Learn more how to enable a custom domain</a>
+        learn_more_html: <a href='https://academy.marble.so'>Learn more how to enable a custom domain</a>
+        dns_set_correctly: DNS Settings - CNAMEs were set correctly.
+        dns_not_set_correctly: DNS Settings - CNAMEs not set correctly.
+        custom_domain_published: Published  - The new domain is accessible.
+        custom_domain_not_published: Not published  - The new domain is not accessible.
+      sso:
+        sso_login_url: "SSO Login URL"
+        sso_logout_url: "SSO Logout URL"
+        activate_sso: "Activate SSO"
+        sso_secret: "SSO Secret"
+        generate: "Generate key"
+        regenerate: "Regenerate key"
       language:
         submit: Save language
         label: Language
         subtitle: Change the language for the entire academy.
+      currency:
+        instructions: Change the default currency for all your courses. #translate
       access_policy:
         action: Change access
         modal:
@@ -161,7 +285,8 @@ en:
           private: private
           public: public
           subtitle: Get notifications in Slack
-          text: When a course is published or an lesson added, MarbleBot will notify
+          text:
+            When a course is published or an lesson added, MarbleBot will notify
             you via Slack.
           title: Notifications
       settings_navigation:
@@ -169,10 +294,18 @@ en:
         domain: "Domain"
         language: "Language"
         access_policy: "Access Policy"
+      update:
+        updated: "The academy was successfully updated."
+        new_currency: "You've set a new default currency. Now, you can go to the Sales page to set prices and billing options for each course."
+      change_favicon:
+        updated: "Favicon successfully updated."
+        not_updated: "Favicon cannot be updated."
+      remove_favicon:
+        deleted: "Favicon deleted successfully."
     themes:
       background_image: Background image
-      bg_instructions: 'Max size: 3000 x 1000 px'
-      brand_instructions: 'Max size: 500 x 175 px'
+      bg_instructions: "Max size: 3000 x 1000 px"
+      brand_instructions: "Max size: 500 x 175 px"
       brand_logo: Brand logo
       button_color: Buttons color
       button_text_color: Buttons text color
@@ -183,7 +316,8 @@ en:
       course_body_text_color: Course body text color
       course_design: Course design
       course_design_subtitle: Course design subtitle
-      delete_image: Delete image
+      delete_image:
+        not_deleted: "Sorry, we couldn't delete this image."
       go_to: Go to theme settings
       images: Images
       images_subtitle: Customize the images shown in your academy.
@@ -193,17 +327,58 @@ en:
       save: Save new theme
       title: Theme settings
       title_color: Title color on homepage
+      create:
+        updated: "Theme was successfully updated."
+      destroy:
+        destroyed: "Theme was successfully destroyed."
+    certificates:
+      create:
+        created: "The certificate was created."
+        error: "There was error when creating the certificate."
+      view_pdf:
+        title: "Certificate of Completion"
+        was_awarded: "was awarded at %{date} to"
+        for_completing: "for completing the course"
+    tags:
+      destroy:
+        destroyed: "Tag was successfully deleted."
+    integrations:
+      index:
+        stripe_description: "Integrate your Stripe account to your academy and start selling your courses to new learners."
+        mailchimp_description: "Automatically create a new Mailchimp contact whenever someone registers to your academy."
+        intercom_description: "Automatically create a new Intercom contact whenever someone registers to your academy."
+        hubspot_description: "Automatically create a new Hubspot contact whenever someone registers to your academy."
   errors:
     messages:
       not_saved:
-        one: '1 error prohibited this %{resource} from being saved:'
+        one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  payments:
+    show:
+      purchase_confirmation: Purchase confirmation
+      confirmation:
+        title: Your new journey starts now!
+        payment_confirmed_html: The payment was confirmed and your new course is already available. That means you can <a href='%{link}'>start learning right away</a>.
+        learning_metrics_html: You can also <a href='%{link}'>keep up with your learning metrics</a> on your profile page.
+        lets_start: "Let's start!"
+      error:
+        title: Oops!
+        something_wrong: There was something wrong with your payment. Please, check if the information provided is correct.
+        restart: You can restart the process again in order to access the course.
+        go_to_payment: Go to payment
+    cancel_subscription:
+      canceled: "Your subscription was canceled."
+      error: "Something went wrong and we couldn't cancel your subscription."
+    purchase_confirmation: "Purchase confirmation"
+    create:
+      unable_to_proceed: "Unable to proceed. The academy is disconnected from the payment system. Please, contact support."
   items:
     update: Update Lesson
     edit: Edit Lesson
     delete: Delete Lesson
     add: Add Lesson
-    create: Create Lesson
+    create:
+      created: "Lesson was successfully created."
     save: Save Lesson
     add_question: Add Question
     choose_file: Choose a file
@@ -220,13 +395,28 @@ en:
       text_description: Long form text with style
       embed_description: Embed any content you like
       quiz_description: Giver clear options
+      title_goes_here: "Title goes here"
+      description_goes_here: "Description goes here"
+      learn_more: "Learn more about how to create a course"
+      content: "Content"
+      not_saved: "%{error} prohibited this item from being saved:"
+      paste_or_type: "Paste or type a link"
+      learn: "Learn more"
+      pdf_link_html: "Add a <span class='font-weight-bold'>PDF</span> by link:"
+      pdf_explanation_html: "PDFs can only be shown with links ending in <span class='font-italic'>'.pdf'</span>. For other PDFs please use the upload below."
+      video_explanation_html: "Use videos from <span class='font-weight-bold'>YouTube</span>, <span class='font-weight-bold'>Vimeo</span>, <span class='font-weight-bold'>Wistia</span>, <span class='font-weight-bold'>Loom</span> and many other video hosting platforms."
+      embed_content_html: "Embed content <span class='font-weight-bold'>by link</span>:"
+      embed_explanation_html: "Enter a valid <span class='font-weight-bold'>iframe</span> or <span class='font-weight-bold'>embed code</span> from your favorite tools, e.g. Miro, Trello or Figma."
+      upload_pdf_html: "or <span class='font-weight-bold'>upload a PDF</span> file from your computer:"
+      about_questions: "about how to add your questions."
     index:
       all: All
       reset: Reset
       tag: Select a tag
+      create: "Add new lesson"
     myitem:
       answer: View Answer
-      back: 'Back to:'
+      back: "Back to:"
       complete: Complete
       completed: Completed
       contents: Lessons
@@ -249,6 +439,14 @@ en:
       question_text: You can add questions after creating the lesson.
     show:
       link: Visit link
+    myitem_show:
+      needs_sign_in: "You need to sign in or sign up before continuing."
+      not_enrolled: "Not enrolled in this path yet."
+    create_advanced:
+      updated: "Lesson was successfully updated."
+    _configuration_navbar:
+      all_courses: "All Courses"
+      publish: "Publish"
   layouts:
     _navbar:
       account_question: Have an account?
@@ -260,6 +458,7 @@ en:
       my_settings: My settings
       support: Support
       templates: Templates
+      upgrade_plan: "Upgrade Plan!"
     _navbar_tenants:
       account_question: Have an account?
   notification_mailer:
@@ -268,6 +467,7 @@ en:
       sign_in: Sign In
       workspace_name: Academy name
       workspace_url: Academy URL
+      subject: "[Marble] Notifications from %{tenant}"
   paths:
     shared:
       choose_file: Choose a file
@@ -307,7 +507,7 @@ en:
       restore: Restore default
       label:
         banner: Cover image
-        banner_instructions: 'Max size: 3000 x 1500 px'
+        banner_instructions: "Max size: 3000 x 1500 px"
       title: Change course cover image
     _edit_path_modal:
       label:
@@ -361,7 +561,8 @@ en:
       add_content: Add lesson
       all_learners: All learners
       assign_learners: Assign learners
-      assign_learners_text: You can assign individual learners who will be able to
+      assign_learners_text:
+        You can assign individual learners who will be able to
         see the course and are notified about the course.
       change_name: Change Name
       change_timezone: Change your time zone here
@@ -376,17 +577,21 @@ en:
       person_space: persons in your academy.
       schedule_path: Schedule a course
       schedule_path_text_1: Courses are generally always available to your academy.
-      schedule_path_text_2: With this setting, you can schedule courses to be available
+      schedule_path_text_2:
+        With this setting, you can schedule courses to be available
         only for a certain period of time.
       sending_notification: You will be sending a notification to
       title_1: Add lesson
       title_2: Group course settings
+      needs_author: "You have to be the author to edit this path."
+      needs_author_preview: "You have to be the author to preview this path."
     index:
       assigned: Assigned to me
     review:
       all_learners: All learners
       assign_users: Assign users
-      assign_users_text: You can assign individual users who will be able to see the
+      assign_users_text:
+        You can assign individual users who will be able to see the
         course and are notified about the course.
       change_timezone: Change your time zone here
       currently_in: You are currently in
@@ -399,7 +604,8 @@ en:
       save_draft: Save as draft
       schedule_path: Schedule course
       schedule_path_text_1: Courses are generally always available to your academy.
-      schedule_path_text_2: With this setting, you can schedule courses to be available
+      schedule_path_text_2:
+        With this setting, you can schedule courses to be available
         only for a certain period of time.
       sending_notification: You will be sending a notification to
       title: Configure course
@@ -418,6 +624,7 @@ en:
       no_items: There are no lessons yet.
       path_published: Course was successfully published.
       send_invitations: Send invitations
+      not_published: "This course is not published yet."
     show_share:
       sharelink:
         button: Copy
@@ -426,14 +633,36 @@ en:
       create_template: Create from template
       title: Templates
       view_original: View original course
+    create_from_template:
+      created: "Course was successfully created from template."
+    restore_default_image:
+      not_deleted: "We couldn't delete the background image."
+    publish:
+      published: "Course was successfully published."
+      limit: "You've reached the limit of your plan. Consider upgrading your account at Admin > Billing."
+    update:
+      updated: "Course was successfully updated."
+      settings_changed: "Course settings were successfully changed."
+    add_existing_items:
+      added: "Item was successfully added."
+    remove_item:
+      removed: "Lesson was successfully removed from course."
+      not_removed: "Course must contain at least one lesson."
+    update_cover:
+      error: "There was an error with the updating the cover."
+    invite_user: "Learner was successfully invited!"
+    validations:
+      limit_mb: "is larger than 5MB"
   questions:
     shared:
       correct: Correct answer!
       incorrect: Incorrect!
-      correct_text: 'The correct answer is option:'
+      correct_text: "The correct answer is option:"
       multiple: Multiple choice question
       submit: Submit
       answer: Check for correct answer
+      created: "Question was successfully created."
+      deleted: "Question was successfully deleted."
     _option_fields:
       option: Option
       answer: Check answer
@@ -453,6 +682,7 @@ en:
       position: Enter your position
     _profile_navigation:
       overview: Overview
+    updated: "User was successfully updated."
   users:
     shared:
       password: Password
@@ -487,32 +717,38 @@ en:
       edit:
         consent_text_html: By continuing, you're agreeing to our %{terms}.
         submit_button: Save my password
-        subtitle_html: You'll use your email address (<strong>%{email}</strong>) and
+        subtitle_html:
+          You'll use your email address (<strong>%{email}</strong>) and
           a password to sign in to your academy on Marble.
         title: Join %{tenant}
     mailer:
       invitation_instructions:
-        body_html: has invited you to join the academy <strong>%{tenant}</strong>. Join
+        body_html:
+          has invited you to join the academy <strong>%{tenant}</strong>. Join
           now to start learning!
         cta: Join Now
         title: Join %{tenant} on Marble
       reset_password_instructions:
-        body: 'You told us you forgot your password. If you really did, click here
-          to choose a new one:'
+        body:
+          "You told us you forgot your password. If you really did, click here
+          to choose a new one:"
         cta: Choose a New Password
         hint: "“Choose a New Password” button not working?"
-        hint2: 'Just copy and paste this link in your browser:'
-        no_reset: If you didn't mean to reset your password, then you can just ignore
+        hint2: "Just copy and paste this link in your browser:"
+        no_reset:
+          If you didn't mean to reset your password, then you can just ignore
           this email; your password will not change.
         title: Reset your password
     passwords:
       edit:
         submit_button: Change my password
-        subtitle_html: Enter your new password for your Marble account to sign in
+        subtitle_html:
+          Enter your new password for your Marble account to sign in
           to <strong>%{tenant}</strong>.
       new:
         reset_link: Get Reset Link
-        subtitle_html: To reset your password, enter the email address you use to
+        subtitle_html:
+          To reset your password, enter the email address you use to
           sign in to <strong>%{tenant}</strong>.
     registrations:
       new:
@@ -522,6 +758,8 @@ en:
     sessions:
       new:
         title: Sign in to %{tenant}
+    validations:
+      limit_mb: "is larger than 5MB"
   welcome:
     _modal_new_path:
       label:
@@ -538,17 +776,10 @@ en:
       label: Enter your Academy URL
       placeholder: your-team-url
       title: Sign in to your Academy
-  # money gem
-  number:
-    currency:
-      format:
-        delimiter: ","
-        separator: "."
-  # money gem - falling back to
-  number:
-    format:
-      delimiter: ","
-      separator: "."
+    create: "Welcome to your new space! Please, sign in to start using it."
+    find_team:
+      not_found: "Academy not found."
+      enter_name: "Please Enter the Space Name."
   global:
     back: Back
     cancel: Cancel
@@ -576,6 +807,7 @@ en:
     name: Name
     title: Title
     description: Description
+    summary: Summary
     url: URL
     email: E-mail
     details: Details
@@ -585,7 +817,10 @@ en:
     lessons: Lessons
     user: User
     users: Users
-    academy: Academy
+    academy:
+      zero: Academy
+      one: Academy
+      other: Academies
     academies: Academies
     group: Group
     groups: Groups
@@ -593,7 +828,6 @@ en:
     tags: Tags
     view: View
     views: Views
-    in_hours: In hours
     date: Date
     "yes": "Yes"
     "no": "No"
@@ -628,7 +862,182 @@ en:
     billing: Billing
     sales: Sales
     price: Price
+    revenue: Revenue
     integration: Integration
     integrations: Integrations
-    revenue: Revenue
     currency: Currency
+    sso: "Single Sign-On"
+    certificate_template: "Certificate Template"
+    hi: "Hi"
+    all_rights_reserved: "All rights reserved"
+    thanks: "Thanks"
+    ceo_and_founder: "CEO and founder of Marble"
+  certificates:
+    issue_automatic_certificate: "Congratulations, you have a new certificate! You can view and download it from your profile page."
+  tenants:
+    create:
+      recaptcha: "reCAPTCHA Authorization Failed. Please try again."
+    confirmation:
+      welcome: "Welcome to Marble! Your email has been confirmed. Please log in to continue."
+      tenant_doesnt_exist: "Sorry. Tenant does not exist."
+  certificate_mailer:
+    send_certificate:
+      subject: "Congratulations %{user}, you've completed your %{path} course!"
+      preheader: "You've got a new certificate!"
+      congratulations_html: "We want to congratulate you on completing your <strong>%{path}</strong> course in the %{tenant}'s Academy."
+      you_can_view_html: "You can view and download your certificate on the %{href}."
+      view_certificate: "View Certificate"
+      share_html: "Finally, don't forget to <strong>share your achievement</strong> with your network!"
+  payment_mailer:
+    send_payment_confirmation:
+      subject: "%{user}, your payment was confirmed!"
+      preheader: "Your payment was confirmed!"
+      subscription_paid_html: "We've just received your subscription payment for the course <strong>%{path}</strong>, which is still available on %{tenant}'s Academy."
+      track_metrics: "track your learning metrics"
+      you_can_track_html: "You can also %{href} and manage payments and subscriptions on your profile's page."
+      resume_course: "Resume course"
+      course_paid_html: "We've just received your payment for the course <strong>%{path}</strong>, which is already available on %{tenant}'s Academy."
+      start_learning: "Start learning"
+    send_cancellation_confirmation:
+      canceled: "Your subscription was canceled."
+      confirmation_message_html: "This is a confirmation message of your subscription cancellation for the course <strong>%{path}</strong>."
+      you_can_still_html: "You can still %{href1}, %{href2}, and %{href3} on your profile's page."
+      href1_text: "track your learning metrics"
+      href2_text: "view and download your certificates"
+      href3_text: "manage payments and subscriptions"
+  plan_mailer:
+    reminder_3_days:
+      subject: "Your trial expires in 3 days"
+    reminder_last_day:
+      subject: "%{user}, we have a plan for you!"
+    hope_you_liked: "We hope you liked your experience with Marble."
+    hope_you_are_enjoying: "We hope you are enjoying your experience with us!"
+    with_marble_html: "With <strong>Marble</strong>, in a matter of minutes, you can build stylish courses packaged in your white-labeled themed academy. You can use it for marketing, customer training, onboarding, and any other educational purposes."
+    choose_plan_in_3_html: "As you are now using a trial version of the academy, you will need to <strong>choose a plan in 3 days</strong> to continue."
+    choose_plan: "Choose a plan"
+    if_any_questions: "If you have any questions, just hit reply on this email."
+    tomorrow_last_day_html: "Tomorrow is the <strong>last day of your trial period</strong>. However, if you want to continue to build amazing academies to your customers, we have a plan for your needs!"
+    acquisition:
+      subject: "Congratulations! You purchased a Marble plan."
+      congratulations: "Congratulations! You have purchased a plan from Marble. We hope our partnership will be very fruitful for your business."
+    start_using: "Build your academy!"
+    cancellation:
+      subject: "Your Marble plan was canceled."
+      first: "This is a confirmation message of your Marble plan cancellation."
+      feedback: "Please, let us know if we can do something to enhance your experience with us - you can anwer this email."
+    renovation:
+      subject: "We've received your payment."
+      payment_received: "The payment for your plan renovation, which is being used in the %{academy} academy, is confirmed."
+    keep_using: "Go to your academy"
+    update:
+      subject: "Your academy has just been updated."
+      confirmation: "The %{academy} academy has just been updated to the %{plan} Plan. We hope you are enjoying your experience with us."
+      anything_else: "In case you need anything else or have any doubt, please answer this email."
+  tenant_mailer:
+    registration_confirmation:
+      subject: "Registration Confirmation"
+    appsumo_welcome:
+      subject: "Registration Confirmation"
+    welcome_message:
+      subject: "Welcome to Marble!"
+  certificate_templates:
+    validations:
+      limit_mb: "is larger than 5MB"
+      limit_px: "is larger than 1200 x 600 pixels"
+  themes:
+    validations:
+      limit_mb: "is larger than 5MB"
+      limit_px1: "is larger than 2000 x 700 pixels"
+      limit_px2: "is larger than 3000 x 1000 pixels"
+  payment:
+    currencies:
+      usd: "US dollar (USD)"
+      eur: "Euro (EUR)"
+      aud: "Australian dollar (AUD)"
+      gbp: "British sterling (GBP)"
+      bgn: "Bulgarian lev (BGN)"
+      cad: "Canadian dollar (CAD)"
+      cny: "Chinese yuan renminbi (CNY)"
+      hrk: "Croatian kuna (HRK)"
+      czk: "Czech koruna (CZK)"
+      dkk: "Danish krone (DKK)"
+      hkd: "Hong Kong dollar (HKD)"
+      huf: "Hungarian forint (HUF)"
+      isk: "Icelandic krona (ISK)"
+      inr: "Indian rupee (INR)"
+      idr: "Indonesian rupiah (IDR)"
+      ils: "Israeli shekel (ILS)"
+      jpy: "Japanese yen (JPY)"
+      php: "Philippine peso (PHP)"
+      mxn: "Mexican Peso (MXN)"
+      myr: "Malaysian ringgit (MYR)"
+      nzd: "New Zealand dollar (NZD)"
+      nok: "Norwegian krone (NOK)"
+      ron: "Romanian leu (RON)"
+      rub: "Russian rouble (RUB)"
+      sgd: "Singapore dollar (SGD)"
+      krw: "South Korean won (KRW)"
+      sek: "Swedish krona (SEK)"
+      thb: "Thai baht (THB)"
+      try: "Turkish lira (TRY)"
+      zar: "South African rand (ZAR)"
+      brl: "Brazilian real (BRL)"
+      pln: "Polish zloty (PLN)"
+      chf: "Swiss franc (CHF)"
+  # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
+  datetime:
+    distance_in_words:
+      half_a_minute: "half a minute"
+      less_than_x_seconds:
+        one: "less than 1 second"
+        other: "less than %{count} seconds"
+      x_seconds:
+        one: "1 second"
+        other: "%{count} seconds"
+      less_than_x_minutes:
+        one: "less than a minute"
+        other: "less than %{count} minutes"
+      x_minutes:
+        one: "1 minute"
+        other: "%{count} minutes"
+      about_x_hours:
+        one: "about 1 hour"
+        other: "about %{count} hours"
+      x_days:
+        one: "1 day"
+        other: "%{count} days"
+      about_x_months:
+        one: "about 1 month"
+        other: "about %{count} months"
+      x_months:
+        one: "1 month"
+        other: "%{count} months"
+      about_x_years:
+        one: "about 1 year"
+        other: "about %{count} years"
+      over_x_years:
+        one: "over 1 year"
+        other: "over %{count} years"
+      almost_x_years:
+        one: "almost 1 year"
+        other: "almost %{count} years"
+    prompts:
+      year: "Year"
+      month: "Month"
+      day: "Day"
+      hour: "Hour"
+      minute: "Minute"
+      second: "Seconds"
+  pending: "Pending"
+  profile_page: "profile page"
+  visit_academy: "Visit Academy"
+  invitation_mailer:
+    invitation_instructions:
+      someone_invited_you: "%{sender} has invited you to use %{tenant}'s Academy. Use the button below to set up your account and get started:"
+      action_text: "Set up account"
+      welcome_aboard: "Welcome aboard"
+      if_trouble: "If you’re having trouble with the button above, copy and paste the URL below into your web browser."
+      mail_subject: "%{sender} invited you to %{tenant}'s Academy"
+      contact_support1: "Feel free to contact our"
+      contact_support2: "support team"
+      contact_support3: "if you have any technical issue. (We're lightning quick at replying.)"
