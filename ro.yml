@@ -2,170 +2,170 @@
 en:
   activerecord:
     models:
-      answer: Answer
-      certificate: Certificate
-      certificate_template: Certificate Template
-      feature: Feature
-      goal: Goal
-      group: Group
-      integration: Integration
-      item: Lesson
-      option: Option
-      path: Course
-      payment: Payment
+      answer: Răspuns
+      certificate: Certificat
+      certificate_template: Șablon Certificat
+      feature: Funcționalitate
+      goal: Obiectiv
+      group: Grup
+      integration: Integrare
+      item: Lecție
+      option: Opțiune
+      path: Curs
+      payment: Plată
       plan: Plan
-      question: Question
-      skill: Tag
-      tenant: Academy
-      theme: Theme
-      user: User
+      question: Întrebare
+      skill: Etichetă
+      tenant: Academie
+      theme: Temă
+      user: Utilizator
     attributes:
       certificate:
-        date_issued: Date issued
-        status: Status
+        date_issued: Data emiterii
+        status: Stare
       certificate_template:
-        course_description: Course description
-        brand_logo: Brand logo
-        signature: Signature
-        printed_name: "Printed name"
-        printed_position: "Printed position"
-        minimum_level: "Minimum level to issue"
-        automatically_issued: "Automatically issued"
+        course_description: Descrierea cursului
+        brand_logo: Logo-ul mărcii
+        signature: Semnătură
+        printed_name: "Numele tipărit"
+        printed_position: "Poziția tipărită"
+        minimum_level: "Nivel minim pentru emitere"
+        automatically_issued: "Emis automat"
       groups:
-        name: Name
+        name: Nume
       items:
-        attachment: Attachment
+        attachment: Atașament
       path:
-        banner: Cover image
-        background_image: Background image
-        free: Free
-        subscription: Subscription
-        one-time: One-time
+        banner: Imagine de copertă
+        background_image: Imagine de fundal
+        free: Gratuit
+        subscription: Abonament
+        one-time: Unic
       tenants:
-        subdomain: Subdomain
-        password: Password
+        subdomain: Subdomeniu
+        password: Parolă
       themes:
-        brand_logo: Brand logo
-        background_image: Background image
-        course_background: Course background
+        brand_logo: Logo-ul mărcii
+        background_image: Imagine de fundal
+        course_background: Fundalul cursului
       user:
         avatar: Avatar
   admin:
     welcome:
       index:
-        total_views: Total Views
-        lesson_title: Lesson title
-        in_minutes: "(in minutes)"
+        total_views: Vizualizări totale
+        lesson_title: Titlul lecției
+        in_minutes: "(în minute)"
     paths:
       certificates_tab:
-        completed: Completed Lessons
-        status: Certificates Status
-        issued: Issued
-        pending: Pending
-        automatic: Automatically
-        canceled: Canceled
-        pdf: View as PDF
-        cancel: Cancel
-        issue: Issue
-        no_certificate: There is no certificate template created yet.
-        create_template: Create a template
+        completed: Lecții Finalizate
+        status: Stare Certificat
+        issued: Emis
+        pending: În așteptare
+        automatic: Automat
+        canceled: Anulat
+        pdf: Vizualizați ca PDF
+        cancel: Anulare
+        issue: Emite
+        no_certificate: Nu a fost creat încă un șablon de certificat.
+        create_template: Creați un șablon
       users_tab:
-        completed: Completed Lessons
-        details: Details
+        completed: Lecții Finalizate
+        details: Detalii
       edit_payment:
-        billing_mode: Billing mode
-        edit_payment: Edit payment
-        currency_hint: "You are using %{name} (%{code}) as your default currency."
-        change_currency: "Change currency"
+        billing_mode: Modul de facturare
+        edit_payment: Editați plata
+        currency_hint: "Utilizați %{name} (%{code}) ca monedă implicită."
+        change_currency: "Schimbați moneda"
       update:
-        updated: "Course was successfully updated."
-        error: "Sorry, something went wrong when updating."
+        updated: "Cursul a fost actualizat cu succes."
+        error: "Ne pare rău, ceva nu a mers bine la actualizare."
       destroy:
-        destroyed: "Course was successfully destroyed."
+        destroyed: "Cursul a fost distrus cu succes."
       sales:
-        active_subscriber: "active subscriber"
-        active_subscribers: "active subscribers"
+        active_subscriber: "abonat activ"
+        active_subscribers: "abonați activi"
     users:
       index:
-        banner_button: Change access policy
-        banner_title: Want to allow users to sign up by themselves?
+        banner_button: Schimbați politica de acces
+        banner_title: Doriți să permiteți utilizatorilor să se înscrie singuri?
         invite:
-          button: Invite User
-          email: Email address
-          name: Name
-          title: Invite new users
+          button: Invitați Utilizatorul
+          email: Adresa de email
+          name: Nume
+          title: Invitați utilizatori noi
         sharelink:
-          button: Copy
-          title: Or share this link
-        expenditures: Expenditures
+          button: Copiați
+          title: Sau distribuiți acest link
+        expenditures: Cheltuieli
         lesson:
-          zero: Lesson
-          one: Lesson
-          other: Lessons
-        last_viewed: "Last viewed:"
+          zero: Lecție
+          one: Lecție
+          other: Lecții
+        last_viewed: "Vizualizate recent:"
       change_role:
-        one_admin: "You need at least one administrator."
-        admin_limit: "You've reached your limit of admins. Consider upgrading your plan at Admin > Billing."
-        not_valid: "This is not a valid role."
+        one_admin: "Aveți nevoie de cel puțin un administrator."
+        admin_limit: "Ați atins limita de administratori. Luați în considerare actualizarea planului la Admin > Facturare."
+        not_valid: "Acesta nu este un rol valid."
       helper:
-        active: "Active"
-        invitated: "Invitation Pending"
+        active: "Activ"
+        invitated: "Invitație în așteptare"
     items:
-      completed: Completed
+      completed: Finalizat
       destroy:
-        destroyed: "Lesson was successfully deleted."
+        destroyed: "Lecția a fost ștearsă cu succes."
     groups:
       index:
-        members: Members
-        member: Member
-        new: New group
-        edit: Edit group
-        modal_form_name: Name
-        modal_form_users_label: Add users
-        modal_form_users_placeholder: Select users
-        modal_title: Create a new group
+        members: Membri
+        member: Membru
+        new: Grup nou
+        edit: Editare grup
+        modal_form_name: Nume
+        modal_form_users_label: Adăugați utilizatori
+        modal_form_users_placeholder: Selectați utilizatori
+        modal_title: Creează un grup nou
       show:
         action:
-          remove: Remove from group
-        col_name: Name
-        modal_form_name_placeholder: Name
-        modal_form_users_label: Add users
-        modal_form_users_placeholder: Select users
-        modal_title: Update group
+          remove: Scoate din grup
+        col_name: Nume
+        modal_form_name_placeholder: Nume
+        modal_form_users_label: Adăugați utilizatori
+        modal_form_users_placeholder: Selectați utilizatori
+        modal_title: Actualizați grupul
       create:
-        created: "Group was successfully created."
+        created: "Grupul a fost creat cu succes."
       update:
-        updated: "Group was successfully updated."
+        updated: "Grupul a fost actualizat cu succes."
       destroy:
-        destroyed: "Group was successfully deleted."
+        destroyed: "Grupul a fost șters cu succes."
     certificate_templates:
       index:
-        issue_config: Issue Configuration
-        issued: Issued
+        issue_config: Emite Configurare
+        issued: Emis
         manual: Manual
-        automatic: Automatic
-        template: Template
-        not_created: Not created yet
-        edit: Edit template
-        create: Create template
+        automatic: Automat
+        template: Șablon
+        not_created: Nu a fost creat încă
+        edit: Editați șablonul
+        create: Creați șablon
       update:
-        updated: "The certificate template was successfully updated."
+        updated: "Șablonul de certificat a fost actualizat cu succes."
       edit:
-        subtitle_html: "Edit certificates for the course <strong>%{course}</strong>."
-        change_logo: "Change logo"
-        upload_logo: "Upload logo"
-        file_recommendations: "We recommend using a PNG file with transparency. Maximum size: 1200 x 600px."
-        change_signature: "Change signature"
-        upload_signature: "Upload signature"
-        automatic_hint: "If you set this as automatic, certificates will be issued after the learner reaches a minimum level to issue, which you can setup below."
+        subtitle_html: "Editați certificatele pentru cursul <strong>%{course}</strong>."
+        change_logo: "Schimbați sigla"
+        upload_logo: "Încărcați sigla"
+        file_recommendations: "Vă recomandăm să utilizați un fișier PNG transparent. Dimensiune maximă: 1200 x 600 px."
+        change_signature: "Schimbați semnătura"
+        upload_signature: "Încărcați semnătura"
+        automatic_hint: "Dacă setați acest lucru ca automat, certificatele vor fi emise după ce cursantul atinge un nivel minim pentru emitere, pe care îl puteți configura mai jos."
     layouts:
       application:
-        workspace: Back to Academy
-        marble_academy: "💎 Marble Academy"
-        help_center: "📚 Help Center"
-        facebook: "👍 Facebook Group"
-        feature_request: "👾 Feature request"
-        contact_support: "💬 Contact support"
+        workspace: Înapoi la Academie
+        marble_academy: "💎 Academia Marble"
+        help_center: "📚 Centrul de Ajutor"
+        facebook: "👍 Grupul Facebook"
+        feature_request: "👾 Solicitare funcționalitate"
+        contact_support: "💬 Contactați asistența"
     questions:
       show:
         col:
