@@ -169,7 +169,7 @@ en:
     questions:
       show:
         col:
-          attempts: Attempts
+          attempts: Încercări
           correct: Correct
           name: Name
         completed: Completed
