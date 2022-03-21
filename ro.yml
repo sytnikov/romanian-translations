@@ -170,43 +170,43 @@ en:
       show:
         col:
           attempts: Încercări
-          correct: Correct
-          name: Name
-        completed: Completed
-        title: Title
+          correct: Corect
+          name: Nume
+        completed: Completat
+        title: Titlu
       destroy:
-        destroyed: "Question was successfully deleted."
+        destroyed: "Întrebarea a fost ștearsă cu succes."
     plans:
       index:
-        manage: Manage your Plan
-        lifetime: Lifetime access to
-        includes: Plan includes
-        current: Current Plan
-        unlimited: Unlimited
-        unlimited_learners: Unlimited learners
-        unlimited_creators: Unlimited creators
-        unlimited_drafts: Unlimited draft courses
-        analytics: Advanced analytics
-        features: View all features
-        upgrade: Upgrade plan
-        quote: Get a quote
-        features_included: Features included in all plans
-        alert_premium: Your plan provides two academies. If you want to create a second one, please get in touch with us through <a href="mailto:support@marbleteams.com">support@marbleteams.com</a>.
-        topic1: Private/public academy
-        topic2: "Micro-learning: bite-sized course creator"
-        topic3: Public, restricted and hidden courses
-        topic4: Quizzes
-        topic5: Custom domain
-        topic6: Email invites/link invites
-        topic7: Embed widgets
-        topic8: Custom branding
-        topic9: Certificates
-        topic10: Groups
-        topic11: Multiple languages
-        topic12: All lessons in one place/lesson view
-        topic13: User profiles
-        topic14: Clone lessons
-        topic15: Course collaborators
+        manage: Gestionați-vă planul
+        lifetime: Acces pe viață la
+        includes: Planul include
+        current: Planul curent
+        unlimited: Nelimitat
+        unlimited_learners: Cursanți nelimitați
+        unlimited_creators: Creatori nelimitați
+        unlimited_drafts: Cursuri draft nelimitate
+        analytics: Analiză avansată
+        features: Vizualizați toate funcționalitățile
+        upgrade: Actulizare abonament
+        quote: Cereți o ofertă
+        features_included: Funcționalități incluse în toate planurile
+        alert_premium: Planul dvs. oferă două academii. Dacă doriți să creați a doua, vă rugăm să ne contactați prin intermediul <a href="mailto:support@marbleteams.com">support@marbleteams.com</a>.
+        topic1: Academie privată/publică
+        topic2: "Micro-learning: creator de cursuri de dimensiuni mici"
+        topic3: Cursuri publice, restrânse și ascunse
+        topic4: Quiz-uri
+        topic5: Domeniu personalizat
+        topic6: Invitații prin e-mail/invitații prin link
+        topic7: Încorporați widget-uri
+        topic8: Branding personalizat
+        topic9: Certificate
+        topic10: Grupuri
+        topic11: Limbi multiple
+        topic12: Toate lecțiile într-un singur loc/vizualizare lecție
+        topic13: Profilurile utilizatorilor
+        topic14: Clonează lecții
+        topic15: Colaboratori de curs
         manage_subscription: "Manage Subscription"
         unlimited_academies: "Unlimited academies"
         unlimited_active_courses: "Unlimited active courses"
